@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RailsInterviewProject</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Rails Interview</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_react_refresh_tag %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag 'application' %>
+  </head>
 
-<%= yield %>
-
-</body>
+  <body>
+    <div class="d-flex flex-column vh-100">
+      <%= render "shared/navbar" %>
+      <%= render "shared/flash" %>
+      <main class="container px-4 py-4 mx-auto flex-grow-1 d-flex flex-column">
+        <%= yield %>
+      </main>
+      <%= render "shared/footer" %>
+    </div>
+  </body>
 </html>

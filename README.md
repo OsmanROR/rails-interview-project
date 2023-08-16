@@ -1,3 +1,35 @@
+# Instructions
+Successfully accomplished all tasks, including the extra credit feature.
+## Tech Stack:
+    Rails 7.0.6
+    Ruby 3.2.2
+    Sqlite
+    Bootstrap 5
+    Rspec
+    Jest
+    React 18
+    Vite
+
+## Project Setup:
+commands to run the project:
+
+```bash
+bundle install
+bundle exec rake db:setup
+gem install foreman
+foreman start
+```
+## Run Test:
+
+```bash
+bundle exec rspec
+yarn test
+```
+
+## Screenshots:
+
+Project Screenshot added in the screenshot folder.
+
 # Kaleo Rails Engineer Candidate Interview Project
 
 Thanks for taking the time to complete this exercise. We're excited that you're considering joining our amazing team.

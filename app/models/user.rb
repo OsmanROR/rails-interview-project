@@ -1,6 +1,15 @@
-class User < ActiveRecord::Base
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+class User < ApplicationRecord
+    has_many  :answers,   dependent: :destroy
+    has_many  :questions, dependent: :destroy
 
-  has_many :questions, inverse_of: :asker
-  has_many :answers,   inverse_of: :answerer
-
+    validates :name, presence: :true
 end
